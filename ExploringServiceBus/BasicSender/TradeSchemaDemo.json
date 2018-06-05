@@ -1,0 +1,293 @@
+{
+  "TenantCode": "OpenBank",
+  "SchemaName": "TradeSchemaDemo",
+  "SchemaVersion": 1.0,
+  "PayLoad": {
+  "trade_parties": {
+    "party1": {
+                  "source_system_le_id": "Murex_NY21212",
+                  "lei": "48510000JZ17NWGUA510",
+      "name": "National Westminster Bank",
+      "address": "135 Bishopsgate, London",
+      "country": "England",
+      "organisation_nature": "Financial",
+      "organisation_sector": "Credit Institution",
+      "organisation_additional_sector":"Alternative Investment Fund",
+      "is_organisation_a_central_bank": false,
+      "parent": {
+                                "lei": "48510000JZ17NWGUA510",
+                                "name": "National Westminster Bank",
+                                "address": "135 Bishopsgate, London",
+                                "country": "England",
+                                "organisation_nature": "Financial",
+                                "organisation_sector": "Credit Institution",
+                                "organisation_additional_sector":"Alternative Investment Fund",
+                                "is_organisation_a_central_bank": false
+      }
+     },
+    "party2": {
+      "source_system_cp_id": "Murex_DE98612",
+                  "lei": "48510000JZ17NWGUA510",
+      "name": "Ulster Bank",
+      "address": "847 Churchgate, Dublin",
+      "country": "Ireland",
+      "organisation_nature": "Non Financial",
+      "organisation_sector": "Credit Institution",
+      "organisation_additional_sector":"Alternative Investment Fund",
+      "is_organisation_a_central_bank": false,
+                  "parent": {
+                                "lei": "48510000JZ17NWGUA510",
+                                "name": "National Westminster Bank",
+                                "address": "135 Bishopsgate, London",
+                                "country": "England",
+                                "organisation_nature": "Non Financial",
+                                "organisation_sector": "Credit Institution",
+                                "organisation_additional_sector":"Alternative Investment Fund",
+                                "is_organisation_a_central_bank": false
+      }
+      
+    },
+    "additional_entities": [{ 
+                  "source_system_ae_id": "48510000JZ17NWGUA510",
+      "name": "National Securities Clearing Corporation",
+      "entities": 
+                  [
+                               {
+                                                "entity_type": "Beneficiary",
+                                                "lei": "36282900JZ17NWGUA510"
+                                }
+                  ]
+               }]
+  },
+   "trade_execution": {
+                                "deal_id": "Loan_MGLD_2032",
+                                "asset_class": "Loan",
+                                "source_system": "Calypso",
+                                "execution_timestamp": "2017-02-02T14:22:53Z",
+                                "trading_venue": "XOFF",
+                                "type_of_sft": "REPO",
+                                "event": "ETRM",
+                                "master_agreement_type": "MRA",
+                                "master_agreement_version": "2016",
+                                "other_master_agreement_type": "",
+                                "value_date": "2015-03-04",
+                                "is_open_term": true,
+                                "is_evergreen": true,
+                                "collateral_arrangement_type": "Title Transfer Collateral Arrangement",
+                                "general_collateral_indicator": "Specific Collateral",
+                                "base_product": "METALS",
+                                "sub_product": "NON PRECIOUS",
+                                "further_sub_product": "",
+                                "product_identifier_type": "ISIN",
+                                "product_identifier": "GB9679890863",
+                                "fixed_rate": 12.32,
+                                "day_count_convention": "Actual360",
+                                "floating_rate": "EURODOLLAR",
+                                "floating_rate_reference_period_time_period": "YEAR",
+                                "floating_rate_reference_period_multiplier": "3",
+                                "floating_rate_payment_frequency_time_period": "MNTH",
+                                "floating_rate_payment_frequency_multiplier": "5",
+                                "floating_rate_reset_frequency_time_period": "MNTH",
+                                "floating_rate_reset_frequency_multiplier": "2",
+                                "spread": "12",
+                                "margin_lending_currency_amount": "23232.36",
+                                "margin_lending_currency": "GBP",
+                                "adjusted_rate": "21.32",
+                                "rate_date": "2016-10-10",
+                                "principal_amount_on_value_date": "1211233.22",
+                                "principal_amount_on_maturity_date": "177453.33",
+                                "principal_amount_currency": "EUR",
+                                "fixed_rebate_rate": "13.21",
+                                "floating_rebate_rate": "EURODOLLAR",
+                                "floating_rebate_rate_reference_period_time_period": "YEAR",
+                                "floating_rebate_rate_reference_period_multiplier": "2",
+                                "floating_rebate_rate_payment_frequency_time_period": "MNTH",
+                                "floating_rebate_rate_payment_frequency_multiplier": "2",
+                                "floating_rebate_rate_reset_frequency_time_period": "MNTH",
+                                "floating_rebate_rate_reset_frequency_multiplier": "6",
+                                "spread_of_the_rebate_rate": "122",
+                                "lending_fee": "57222200",
+                                "exclusive_arrangements": false,
+                                "outstanding_margin_loan": "2121000000",
+                                "base_currency_of_outstanding_margin_loan": "EUR",
+                                "short_market_value": "23230000",
+                                "uncollateralised_flag": true,
+                                "portfolio_code": "049560F304A3831CD1C3E541A09A5256",
+                                "buyer": "",
+                                "seller": "",
+                                "collateral_taker": "RBS",
+                                "collateral_provider": "Merryl Lynch"
+  },
+   "trade_confirmation": {
+                                "electronic_mode": true,
+                                "confirmation_timestamp": "2017-02-02T14:22:53Z",
+                                "confirmation_platform": "MarkitServ"
+  },
+   "trade_clearing": {
+                                "is_cleared": true,
+                                "clearing_timestamp": "2017-02-02T14:22:53Z",
+                                "clearing_member": "CME group",
+                                "central_clearing_party": "National Securities Clearing Corporation",
+                                "above_clearing_threshhold": true,
+                                "clearing_fee_indicator": "",
+                                "clearing_instruction": "",
+                                "clearing_fund": "",
+                                "clearing_house": "NSCC",
+                                "loss_sharing_agreement": "",
+                                "intent_to_clear": true,
+                                "clearing_broker": ""
+  },
+   "trade_valuation":[
+                {
+                                "party_type": "party1",
+                                "mtm_value": 1432323.22,
+                                "mtm_currency": "EUR",
+                                "valuation_type": "Mark to Model",
+                                "valuation_timestamp": "2017-02-02T10:22:53Z"
+                },
+                {
+                                "party_type": "party2",
+                                "mtm_value": 1432323.22,
+                                "mtm_currency": "EUR",
+                                "valuation_type": "Mark to Market",
+                                "valuation_timestamp": "2017-02-02T16:22:53Z"
+                },
+                {
+                                "party_type": "CCP",
+                                "mtm_value": 1432323.22,
+                                "mtm_currency": "EUR",
+                                "valuation_type": "Mark to Model",
+                                "valuation_timestamp": "2017-02-02T14:24:53Z"
+                }],
+   "trade_margining": {
+    "portfolio_code": "049560F304A3831CD1C3E541A09A5256",
+    "initial_margin_posted": 8091301662917.27894,
+                "currency_of_the_initial_margin_posted": "WST",
+                "variation_margin_posted": 272372685821.73024,
+                "currency_of_the_variation_margins_posted": "MMK",
+                "initial_margin_received": 178345441075151038.07119,
+                "currency_of_the_initial_margin_received": "GMD",
+                "variation_margin_received": 30967837360210.13502,
+                "currency_of_the_variation_margins_received": "MWK",
+                "excess_collateral_posted": 525346427928466.68305,
+                "currency_of_the_excess_collateral_posted": "BND",
+                "excess_collateral_received": 79315875931316.38186,
+                "currency_of_the_excess_collateral_received": "CRC"
+  },
+   "trade_settlement": {
+    "maturity_date": "2016-02-04",
+    "termination_date": "2014-02-04",
+    "settlement_date": "2014-03-04",
+    "minimum_notice_period": 30,
+    "earliest_callback_date": "2014-02-04",
+    "cash_settlement_agent": "",
+    "domestic_settlement": false,
+    "delivery_versus_delivery": true,
+    "delivery_versus_payment": false,
+    "internal_settlement": "",
+    "loss_sharing_agreement": "",
+    "multilateral_net_settlement": false,
+    "net_settlement": 22434324342.232,
+    "gross_settlement": 988334444222.323,
+    "settlement_currency": "GBP",
+    "settlement_agent": "",
+    "settlement_cycle": "",
+    "settling_member": "",
+    "survivors_pay": ""
+  },
+   "asset": [
+  {  
+                "base_product": "METALS",
+    "sub_product": "NON PRECIOUS",
+    "further_sub_product": "",
+    "security_identifier_type": "ISIN",
+    "security_identifier": "GB9679890863",
+    "quantity_or_nominal_amount": 323223.232,
+    "unit_of_measure": "KILO",
+    "currency_of_nominal_amount": "EUR",
+    "security_or_commodity_price": 457241833.44,
+    "price_currency": "INR",
+    "security_quality": "Investment grade",
+    "security_maturity": "2018-02-06",
+    "issuer_jurisdiction": "DE",
+    "issuer_lei": "74910023PL17NWGUA740",
+    "security_type": "Government securities",
+    "loan_value": 2343434326.33,
+    "cfi_code": "IND244",
+    "type_of_asset": "Commodities",
+                "asset_valuation":{
+                                "market_value": 9876498309.221,
+                                "valuation_currency": "EUR"
+                }
+  }],
+   "collateral": [{
+    "base_product": "METALS",
+    "sub_product": "NON PRECIOUS",
+    "further_sub_product": "",
+    "security_identifier_type": "ISIN",
+    "security_identifier": "GB9679890863",
+    "quantity_or_nominal_amount": 323223.232,
+    "unit_of_measure": "KILO",
+    "currency_of_nominal_amount": "EUR",
+    "security_or_commodity_price": 457241833.44,
+    "price_currency": "INR",
+    "security_quality": "Investment grade",
+    "security_maturity": "2018-02-06",
+    "issuer_jurisdiction": "DE",
+    "issuer_lei": "74910023PL17NWGUA740",
+    "security_type": "Government securities",
+    "loan_value": 2343434326.33,
+    "cfi_code": "IND244",
+    "type_of_asset": "Commodities",
+    "cash_collateral_amount": 233478756.232,
+    "cash_collateral_currency": "CHF",
+    "haircut_or_margin": 77355.23,
+    "collateralisation_by_net_exposure": false,
+    "value_date": "2019-02-02",
+    "availability_for_collateral_reuse": true,
+    "basket_identifier": "GB9679890863",
+    "settlement_date": "2017-04-09",
+    "valuation":{
+                                "market_value": 9876498309.221,
+                                "valuation_currency": "EUR"
+                },
+                "reuse": {
+      "estimated_reuse": 898096576.33,
+      "actual_reuse_value": "",
+      "reinvestment_rate": 1.2,
+      "reinvested_cash": "MMFT",
+      "reinvested_cash_amount": 22.3,
+      "reinvested_cash_currency": "EUR",
+      "funding_sources": "CSHS",
+      "market_value_of_the_funding_sources": 93744498541.477
+    }
+   }],  
+   "trade_reporting": {
+                "trade_identifiers": 
+                {
+                                "uti_value": "049560F304A3831CD1C3E541A09A5256",
+                                "prior_uti_value": "038593F304A3831RT3T4E541A09Y6739",
+                    "usi_value": "049560F304A3831CD1C3E541A09A5256",
+                                "prior_usi_value": "038593F304A3831RT3T4E541A09Y6739",
+                               "trn": "F304A3831CD1C3E541A09"
+    },
+                "rules_override": {
+                                "party1_reporting_jurisidiction": "SFTR",
+                                "party2_reporting_jurisidiction": "EMIR",
+                                "sftr": {
+                                                "sft_type_rule_override": true,
+                                                "party1_country_rule_override": true,
+                                                "party2_country_rule_override": true,
+                                                "matured_trade_rule_override": true,
+                                                "central_bank_rule_override": true,
+                                                "internal_trade_rule_override": true,
+                                                "backloaded_trade_rule_override": true,
+                                                "delegation": "from party2"
+                                }
+               
+    }
+
+  }
+}
+
+}
