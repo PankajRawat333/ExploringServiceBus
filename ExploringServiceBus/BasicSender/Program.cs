@@ -18,10 +18,11 @@ namespace BasicSender
         {
             string connectionString = ConfigurationManager.AppSettings["ServiceBusConnection"];
             string inputQueue = "trade-input";//make sure queue already created
-            const int numberOfMessages = 10;
+            const int numberOfMessages = 2;
 
             QueueClient queueClient = QueueClient.CreateFromConnectionString(connectionString, inputQueue);
-            await SendMessagesAsync(queueClient, numberOfMessages);
+            //await SendMessagesAsync(queueClient, numberOfMessages);
+            await SendMessagesWithHeaderAsync(queueClient, numberOfMessages);
             await queueClient.CloseAsync();
         }
 
@@ -33,6 +34,25 @@ namespace BasicSender
                 for (int i = 0; i < numberOfMessagesToSend; i++)
                 {
                     var message = new BrokeredMessage(tradeData);
+                    await queueClient.SendAsync(message);
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine($"{DateTime.Now} :: Exception: {exception.Message}");
+            }
+        }
+
+        private static async Task SendMessagesWithHeaderAsync(QueueClient queueClient, int numberOfMessagesToSend)
+        {
+            try
+            {
+                string tradeData = File.ReadAllText("TradeSchemaDemo.json");
+                for (int i = 0; i < numberOfMessagesToSend; i++)
+                {
+                    var message = new BrokeredMessage(tradeData);
+                    message.CorrelationId = Guid.NewGuid().ToString();
+                    message.Properties.Add("Tenant", "OpenBank");
                     await queueClient.SendAsync(message);
                 }
             }
