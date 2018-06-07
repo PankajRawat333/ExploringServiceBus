@@ -53,6 +53,7 @@ namespace BasicSender
                     var message = new BrokeredMessage(tradeData);
                     message.CorrelationId = Guid.NewGuid().ToString();
                     message.Properties.Add("Tenant", "OpenBank");
+                    
                     await queueClient.SendAsync(message);
                 }
             }

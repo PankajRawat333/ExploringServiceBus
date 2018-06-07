@@ -9,7 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Receiver", "Receiver", "{03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSender", "BasicSender\BasicSender.csproj", "{37A3327E-B21F-447E-8876-59E1BB84C8F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicReceiver", "BasicReceiver\BasicReceiver.csproj", "{F51BBD79-3595-452A-96BC-3223D559094B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicReceiver", "BasicReceiver\BasicReceiver.csproj", "{F51BBD79-3595-452A-96BC-3223D559094B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchSender", "BatchSender\BatchSender.csproj", "{FAF745C7-3C2E-4B15-863C-C9038BC43276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchReceiver", "BatchReceiver\BatchReceiver.csproj", "{9E544096-1CD8-4F76-878F-D9E56F0FBEDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeadLetterQueueReceiver", "DeadLetterQueueReceiver\DeadLetterQueueReceiver.csproj", "{644C7A83-2D98-4985-88B3-AA41A1BA03E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +31,18 @@ Global
 		{F51BBD79-3595-452A-96BC-3223D559094B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F51BBD79-3595-452A-96BC-3223D559094B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F51BBD79-3595-452A-96BC-3223D559094B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAF745C7-3C2E-4B15-863C-C9038BC43276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF745C7-3C2E-4B15-863C-C9038BC43276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF745C7-3C2E-4B15-863C-C9038BC43276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF745C7-3C2E-4B15-863C-C9038BC43276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E544096-1CD8-4F76-878F-D9E56F0FBEDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E544096-1CD8-4F76-878F-D9E56F0FBEDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E544096-1CD8-4F76-878F-D9E56F0FBEDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E544096-1CD8-4F76-878F-D9E56F0FBEDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{644C7A83-2D98-4985-88B3-AA41A1BA03E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{644C7A83-2D98-4985-88B3-AA41A1BA03E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{644C7A83-2D98-4985-88B3-AA41A1BA03E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{644C7A83-2D98-4985-88B3-AA41A1BA03E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +50,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{37A3327E-B21F-447E-8876-59E1BB84C8F1} = {FC57096D-6B8C-4258-85FC-20163D7F7999}
 		{F51BBD79-3595-452A-96BC-3223D559094B} = {0367180A-6C9D-4ECF-A024-CD57F4457838}
+		{FAF745C7-3C2E-4B15-863C-C9038BC43276} = {FC57096D-6B8C-4258-85FC-20163D7F7999}
+		{9E544096-1CD8-4F76-878F-D9E56F0FBEDF} = {0367180A-6C9D-4ECF-A024-CD57F4457838}
+		{644C7A83-2D98-4985-88B3-AA41A1BA03E5} = {0367180A-6C9D-4ECF-A024-CD57F4457838}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DB57DB7-6560-4FDD-9352-7253A88B28D5}
