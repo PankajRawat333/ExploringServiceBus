@@ -2,7 +2,7 @@
 
 Background
 
-I have created this project to explore basic capability of ServiceBus. My project requirement was an interaction between microservices using message queue and I was comfortable to use storage queue instead of serviceBus, however storage queue have 64k max message size limit and our case that become a bottleneck.
+I have created this project to explore basic capability of ServiceBus. My project required microservices interaction using message queue and I was comfortable to use storage queue instead of serviceBus, however storage queue have 64k max message size limit and that become a bottleneck for us.
 
 
 >Setup your ServiceBus and change connection string
